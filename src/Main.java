@@ -15,6 +15,8 @@ public class Main {
         me.pet.name = "Myszojeleń";
         me.pet.feed();
 
+
+
         System.out.println(dog.name);
         System.out.println(me.pet.name);
 
@@ -38,8 +40,11 @@ public class Main {
         me.pet.walk();
         me.pet.feed();
 
-        me.car = new Car("Ferrari", "488 Spider", 2016, 3902, "V8");
+        me.setSalary(2000.0);
+        me.setCar(new Car("Fiat", "124p(odnowiony)", 2018, 3902, "V8"));
 
-		System.out.println("Just bought a " + me.car.make + " " + me.car.model + " form " + me.car.year + " with a " + me.car.displacement + "cc " + me.car.engine + " engine.");
+		System.out.println();
+        System.out.println("my salary is:" + me.getSalary());
     }
+
 }
