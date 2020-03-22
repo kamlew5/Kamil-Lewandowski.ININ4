@@ -22,7 +22,7 @@ public class Main {
 
         System.out.println("\n---- TASK 1 ----\n");
 
-        me.pet.feed();
+        /*me.pet.feed();
         me.pet.walk();
         me.pet.feed();
         me.pet.walk();
@@ -31,7 +31,7 @@ public class Main {
         me.pet.feed();
         me.pet.feed();
         me.pet.feed();
-        me.pet.feed();
+        me.pet.feed();*/
         while (me.pet.isAlive()) {
             me.pet.walk();
         }
