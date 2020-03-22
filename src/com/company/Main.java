@@ -50,9 +50,9 @@ public class Main {
         me.pet.feed();*/
         while (me.pet.isAlive()) {
             me.pet.walk();
-        }//
+        }
         me.pet.walk();
-        me.pet.feed();
+        //me.pet.feed();
 
         me.setSalary(2000.0);
         me.setCar(new Car("Fiat", "124p(odnowiony)", 2018, 3902, "V8"));
