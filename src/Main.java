@@ -15,7 +15,13 @@ public class Main {
         me.pet.name = "Myszojeleń";
         me.pet.feed();
 
+        Human nikt = new Human();
+        nikt.firstName ="Brak";
+        nikt.lastName = "Znowu Brak";
 
+
+        me.partner = nikt;
+        nikt.partner = me;
 
         System.out.println(dog.name);
         System.out.println(me.pet.name);
