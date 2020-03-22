@@ -33,4 +33,7 @@ public class Human {
             }
         }
     }
+    public void Share(Car car){
+        this.car= car;
+    }
 }

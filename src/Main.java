@@ -23,6 +23,8 @@ public class Main {
         me.partner = nikt;
         nikt.partner = me;
 
+        nikt.Share(nikt.partner.getCar());
+
         System.out.println(dog.name);
         System.out.println(me.pet.name);
 
