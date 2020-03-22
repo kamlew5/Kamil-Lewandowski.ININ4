@@ -50,7 +50,7 @@ public class Main {
         me.pet.feed();*/
         while (me.pet.isAlive()) {
             me.pet.walk();
-        }
+        }//
         me.pet.walk();
         me.pet.feed();
 
