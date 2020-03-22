@@ -1,3 +1,5 @@
+package com.company.creatures;
+
 import java.io.File;
 
 public class Animal {
@@ -21,7 +23,7 @@ public class Animal {
         this.alive = true;
     }
 
-    boolean isAlive() {
+    public boolean isAlive() {
         if (this.weight > 0 && this.alive) {
             System.out.println("STATUS: Awesome :D");
             return true;
@@ -33,7 +35,7 @@ public class Animal {
         }
     }
 
-    void feed() {
+    public void feed() {
         System.out.print("<feed> ");
         if (this.alive) {
             weight++;
@@ -42,7 +44,7 @@ public class Animal {
         else System.out.println("Not gonna work...");
     }
 
-    void walk() {
+    public void walk() {
         System.out.print("<walk> ");
         if (this.alive) {
             weight--;

@@ -1,3 +1,5 @@
+package com.company;
+
 public class Car {
     public final String make;
     public final String model;
@@ -11,5 +13,8 @@ public class Car {
         this.year = year;
         this.displacement = displacement;
         this.engine = engine;
+    }
+    public String toString(){
+        return make + " " + model + " "+ year;
     }
 }

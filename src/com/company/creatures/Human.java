@@ -1,9 +1,14 @@
+package com.company.creatures;
+
+import com.company.Car;
+import com.company.device.Phone;
+
 public class Human {
-    String firstName;
-    String lastName;
+    public String firstName;
+    public String lastName;
     Phone phone;
-    Animal pet;
-    Human partner;
+    public Animal pet;
+    public Human partner;
      private Car car;
     private Double salary = 1000.0;
 
@@ -35,5 +40,8 @@ public class Human {
     }
     public void Share(Car car){
         this.car= car;
+    }
+    public String toString(){
+        return firstName + " " + lastName;
     }
 }
