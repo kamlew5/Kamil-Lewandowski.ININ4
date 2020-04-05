@@ -1,10 +1,12 @@
 package com.company.creatures;
 
+import com.company.Saleable;
+
 import java.io.File;
 
-public class Animal {
-    final String species;
-    private Double weight;
+public class Animal implements Saleable {
+    public final String species;
+    public Double weight;
     public String name;
     private Boolean alive;
     File pic;
@@ -51,5 +53,22 @@ public class Animal {
             System.out.println("been walkin, my weight is now " + this.weight);
         }
         else System.out.println("Walking Dead is so last decade...");
+    }
+
+    //@Override
+    //public void beEat() {
+      //  if(this instanceof Human){
+        //    System.out.println("Hell no!");}
+        //else
+        //{ System.out.println("Okey, go ahead");}
+    //}
+
+    @Override
+    public void sell() {
+    if(this instanceof Human){
+        System.out.println("You want Slave, not this time!");}
+    else{
+        System.out.println("You don't have to ask");
+    }
     }
 }

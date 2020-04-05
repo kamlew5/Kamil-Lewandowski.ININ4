@@ -3,6 +3,7 @@ package com.company;
 
 import com.company.creatures.Animal;
 import com.company.creatures.Human;
+import com.company.device.device;
 
 public class Main {
 
@@ -59,7 +60,11 @@ public class Main {
 
 		System.out.println();
         System.out.println("my salary is:" + me.getSalary());
-        System.out.print(me);
+        System.out.println(me);
+        System.out.println(me.species);
+        me.sell();
+       // me.feed();
+
 
     }
 
