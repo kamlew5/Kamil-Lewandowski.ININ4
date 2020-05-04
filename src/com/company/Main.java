@@ -3,6 +3,7 @@ package com.company;
 
 import com.company.creatures.Animal;
 import com.company.creatures.Human;
+import java.time.format.DateTimeFormatter;
 import com.company.device.device;
 
 public class Main {
@@ -10,6 +11,7 @@ public class Main {
     public static void main(String[] args) {
         Animal dog = new Animal("dog");
         dog.name = "Akita";
+        DateTimeFormatter datethis = DateTimeFormatter.ofPattern("dd.MM.yyyy HH:mm:ss");
 
         dog.feed();
         dog.feed();
@@ -30,7 +32,6 @@ public class Main {
         me.partner = nikt;
         nikt.partner = me;
 
-        nikt.Share(nikt.partner.getCar());
 
         System.out.println(dog.name);
         System.out.println(me.pet.name);
@@ -55,8 +56,6 @@ public class Main {
         me.pet.walk();
         //me.pet.feed();
 
-        me.setSalary(2000.0);
-        me.setCar(new Car("Fiat", "124p(odnowiony)", 2018, 3902, "V8"));
 
 		System.out.println();
         System.out.println("my salary is:" + me.getSalary());

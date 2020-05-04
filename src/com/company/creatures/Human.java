@@ -2,6 +2,7 @@ package com.company.creatures;
 
 import com.company.Car;
 import com.company.device.Phone;
+import java.time.LocalDateTime;
 
 public class Human extends Animal {
     public String firstName;
@@ -10,7 +11,9 @@ public class Human extends Animal {
     public Animal pet;
     public Human partner;
      private Car car;
-    private Double salary = 1000.0;
+    private Double salary;
+    private LocalDateTime lastASalary;
+    private Double lastSalary;
 
 
     public Human() {
@@ -20,29 +23,17 @@ public class Human extends Animal {
 
 
     public Double getSalary() {
-        return salary;
-    }
-    public Car getCar() {
-        return car;
+        System.out.println("Masz kasy: "+lastSalary+" pytali ostatnio o: "+lastASalary);
+        this.lastSalary = this.salary;
+        this.lastASalary = LocalDateTime.now();
+        return this.salary;
     }
     public void setSalary(Double salary) {
-        System.out.println("Twoja pensja wynosi:" + salary);
-        this.salary = salary;
-    }
-
-    public void setCar(Car car) {
-        if(1000 > (getSalary() * 5)){
-            System.out.println("You have no money, here!");
-            this.car = car;
-        }
-        else{
-            if(1000 > getSalary()){
-                System.out.println("Leasing doesn't hurt, that much");
-                this.car = car;
-            }
-            else{
-                System.out.println("Give me some money, Scrooge McDuck!");
-            }
+        if (salary > 0) {
+            System.out.println("Księgowość wie, zapieprzaj do Hani z kadr po aneks. ZUS I US wie o twoich machlojkach.");
+            this.salary = salary;
+        } else {
+            System.out.println("Salary cannot be a negative value.");
         }
     }
     public void Share(Car car){
