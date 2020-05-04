@@ -61,6 +61,9 @@ public class Main {
         System.out.println("my salary is:" + me.getSalary());
         System.out.println(me);
         System.out.println(me.species);
+        System.out.println(me.pet);
+        System.out.println(me.getCar());
+
         me.sell();
        // me.feed();
 

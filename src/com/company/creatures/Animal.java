@@ -71,4 +71,9 @@ public class Animal implements Saleable {
         System.out.println("You don't have to ask");
     }
     }
+    public String toString() {
+        return "Animal:" +
+                "species" + species + ' ' +
+                ", weight" + weight;
+    }
 }

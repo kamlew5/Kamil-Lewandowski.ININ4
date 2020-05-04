@@ -49,6 +49,9 @@ public class Human extends Animal {
             }
         }
     }
+    public Car getCar(){
+        return this.car=car;
+    }
     public void Share(Car car){
         this.car= car;
     }
