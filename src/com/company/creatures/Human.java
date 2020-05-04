@@ -11,7 +11,7 @@ public class Human extends Animal {
     public Animal pet;
     public Human partner;
      private Car car;
-    private Double salary;
+    private Double salary = 160.0;
     private LocalDateTime lastASalary;
     private Double lastSalary;
 
@@ -34,6 +34,19 @@ public class Human extends Animal {
             this.salary = salary;
         } else {
             System.out.println("Salary cannot be a negative value.");
+        }
+    }
+    public void setCar(Car car) {
+        if (getSalary() > car.price) {
+            System.out.println("Give me some money, Scrooge McDuck!");
+            this.car = car;
+        } else {
+            if (getSalary() > (car.price/12)) {
+                System.out.println("Leasing doesn't hurt, that much");
+                this.car = car;
+            } else {
+                System.out.println("You have no money, here!");
+            }
         }
     }
     public void Share(Car car){

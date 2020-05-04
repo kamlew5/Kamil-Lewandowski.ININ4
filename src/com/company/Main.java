@@ -56,7 +56,7 @@ public class Main {
         me.pet.walk();
         //me.pet.feed();
 
-
+        me.setCar(new Car("Fiat", "124p(odnowiony)", 2018, 3902, "V8", 1500.0));
 		System.out.println();
         System.out.println("my salary is:" + me.getSalary());
         System.out.println(me);
