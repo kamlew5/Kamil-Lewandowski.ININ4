@@ -1,7 +1,7 @@
 package com.company.creatures;
 
-import com.company.Car;
 import com.company.device.Phone;
+import com.company.device.Car;
 import java.time.LocalDateTime;
 
 public class Human extends Animal {

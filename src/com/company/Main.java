@@ -4,6 +4,7 @@ package com.company;
 import com.company.creatures.Animal;
 import com.company.creatures.Human;
 import java.time.format.DateTimeFormatter;
+import com.company.device.Car;
 import com.company.device.device;
 
 public class Main {
@@ -63,7 +64,8 @@ public class Main {
         System.out.println(me.species);
         System.out.println(me.pet);
         System.out.println(me.getCar());
-
+        Car Brumek = new Car("Mercedes", "Jakiś", 2015, 3076, "V6", 3000.0);
+        Brumek.TurnOn();
         me.sell();
        // me.feed();
 

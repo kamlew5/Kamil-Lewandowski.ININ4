@@ -2,7 +2,7 @@ package com.company.device;
 
 import com.company.Saleable;
 
-public class device implements Saleable {
+public abstract class device implements Saleable {
     final public String model;
     final public Integer year;
     final public Double price;
@@ -14,9 +14,12 @@ public class device implements Saleable {
         this.price = price;
         this.mark = mark;
     }
-
+    abstract void TurnOn ();
 
     @Override
+    public String toString(){
+        return(mark+" "+model+" "+year);
+    }
     public void sell() {
         System.out.println("This is for sale, bruh");
     }
