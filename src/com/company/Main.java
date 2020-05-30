@@ -3,6 +3,7 @@ package com.company;
 
 import com.company.creatures.Animal;
 import com.company.creatures.Human;
+import com.company.creatures.Pet;
 import com.company.device.Car;
 
 import java.time.format.DateTimeFormatter;
@@ -10,20 +11,15 @@ import java.time.format.DateTimeFormatter;
 public class Main {
 
     public static void main(String[] args) {
-        Animal dog = new Animal("dog");
+        Animal dog = new Pet("dog");
         dog.name = "Akita";
         DateTimeFormatter datethis = DateTimeFormatter.ofPattern("dd.MM.yyyy HH:mm:ss");
-
-        dog.feed();
-        dog.feed();
-        dog.feed();
 
         Human me = new Human();
         me.firstName = "Kamil";
         me.lastName = "Lewandowski";
-        me.pet = new Animal("mouse");
+        me.pet = new Pet("mouse");
         me.pet.name = "Myszojeleń";
-        me.pet.feed();
 
         Human nikt = new Human();
         nikt.firstName ="Brak";
@@ -68,7 +64,7 @@ public class Main {
         Car Brumek = new Car("Mercedes", "Jakiś", 2015, 3076, "V6", 3000.0);
         Brumek.TurnOn();
         me.getCar().sell(me,nikt,1000.0);
-       // me.feed();
+        me.pet.feed(0.4);
 
 
     }

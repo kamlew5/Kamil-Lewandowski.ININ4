@@ -10,7 +10,7 @@ public class Human extends Animal {
     public Phone phone;
     public Animal pet;
     public Human partner;
-     private Car car;
+    private Car car;
     private Double salary = 300.0;
     private LocalDateTime lastASalary;
     private Double lastSalary;

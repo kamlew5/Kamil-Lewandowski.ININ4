@@ -4,7 +4,7 @@ import com.company.Saleable;
 
 import java.io.File;
 
-public class Animal implements Saleable {
+public abstract class Animal implements Saleable {
     public final String species;
     public Double weight;
     public String name;
@@ -33,19 +33,17 @@ public class Animal implements Saleable {
 
     public boolean isAlive() {
         if (this.weight > 0 && this.alive) {
-            System.out.println("STATUS: Awesome :D");
             return true;
         } else {
             this.alive = false;
-            System.out.println("STATUS: Dead :(");
             return false;
         }
     }
 
-    public void feed() {
+    public void feed(Double foodWeight) {
         System.out.print("<feed> ");
         if (this.alive) {
-            weight++;
+            weight+=foodWeight;
             System.out.println("thx for food bro, my weight is now " + this.weight);
         } else System.out.println("Not gonna work...");
     }
