@@ -1,6 +1,9 @@
 package com.company.device;
 
-public class Car extends device{
+import com.company.Saleable;
+import com.company.creatures.Human;
+
+public class Car extends device implements Saleable {
     public final Integer displacement;
     public final String engine;
 
@@ -17,5 +20,16 @@ public class Car extends device{
         return mark + " " + model + " "+ year;
     }
 
-
+    @Override
+    public void sell(Human seller, Human buyer, Double price) {
+        if (buyer.getCash() >= price) {
+            buyer.setCash(buyer.getCash() - price);
+            seller.setCash(seller.getCash() + price);
+            buyer.recieveVehicle(seller.getCar());
+            seller.unsetVehicle();
+            System.out.println("Sprzedałeś auto.");
+        } else {
+            System.out.println("You have no money...");
+        }
+    }
 }

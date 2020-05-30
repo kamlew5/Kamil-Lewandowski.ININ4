@@ -7,13 +7,14 @@ import java.time.LocalDateTime;
 public class Human extends Animal {
     public String firstName;
     public String lastName;
-    Phone phone;
+    public Phone phone;
     public Animal pet;
     public Human partner;
      private Car car;
-    private Double salary = 160.0;
+    private Double salary = 300.0;
     private LocalDateTime lastASalary;
     private Double lastSalary;
+    public Double cash = 3000.0;
 
 
     public Human() {
@@ -21,6 +22,19 @@ public class Human extends Animal {
         this.weight = 100.0;
     }
 
+    public Double getCash(){
+        return this.cash;
+    }
+    public void setCash(Double cash) {
+        this.cash = cash;
+    }
+    public void recieveVehicle(Car usedCar) {
+        this.car = usedCar;
+    }
+
+    public void unsetVehicle() {
+        this.car = null;
+    }
 
     public Double getSalary() {
         System.out.println("Masz kasy: "+lastSalary+" pytali ostatnio o: "+lastASalary);
@@ -58,4 +72,5 @@ public class Human extends Animal {
     public String toString(){
         return firstName + " " + lastName;
     }
+
 }

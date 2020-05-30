@@ -3,9 +3,9 @@ package com.company;
 
 import com.company.creatures.Animal;
 import com.company.creatures.Human;
-import java.time.format.DateTimeFormatter;
 import com.company.device.Car;
-import com.company.device.device;
+
+import java.time.format.DateTimeFormatter;
 
 public class Main {
 
@@ -28,6 +28,7 @@ public class Main {
         Human nikt = new Human();
         nikt.firstName ="Brak";
         nikt.lastName = "Znowu Brak";
+        nikt.cash = 1500.0;
 
 
         me.partner = nikt;
@@ -66,7 +67,7 @@ public class Main {
         System.out.println(me.getCar());
         Car Brumek = new Car("Mercedes", "Jakiś", 2015, 3076, "V6", 3000.0);
         Brumek.TurnOn();
-        me.sell();
+        me.getCar().sell(me,nikt,1000.0);
        // me.feed();
 
 
