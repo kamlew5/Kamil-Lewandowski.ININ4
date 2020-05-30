@@ -5,6 +5,9 @@ import com.company.creatures.Animal;
 import com.company.creatures.Human;
 import com.company.creatures.Pet;
 import com.company.device.Car;
+import com.company.device.DIESEL;
+import com.company.device.Eletric;
+import com.company.device.LPG;
 
 import java.time.format.DateTimeFormatter;
 
@@ -54,18 +57,19 @@ public class Main {
         me.pet.walk();
         //me.pet.feed();
 
-        me.setCar(new Car("Fiat", "124p(odnowiony)", 2018, 3902, "V8", 1500.0));
+        me.setCar(new LPG("Fiat", "124p(odnowiony)", 2018, 3902, "V8", 1500.0));
 		System.out.println();
         System.out.println("my salary is:" + me.getSalary());
         System.out.println(me);
         System.out.println(me.species);
         System.out.println(me.pet);
         System.out.println(me.getCar());
-        Car Brumek = new Car("Mercedes", "Jakiś", 2015, 3076, "V6", 3000.0);
+        Car Brumek = new DIESEL("Mercedes", "Jakiś", 2015, 3076, "V6", 3000.0);
         Brumek.TurnOn();
         me.getCar().sell(me,nikt,1000.0);
         me.pet.feed(0.4);
 
+        Car Tefal = new Eletric("Tesla", "czy to ważne", 2020, 8000, "El Diablo", 6000.0);
 
     }
 

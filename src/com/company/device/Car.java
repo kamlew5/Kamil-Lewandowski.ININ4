@@ -3,7 +3,7 @@ package com.company.device;
 import com.company.Saleable;
 import com.company.creatures.Human;
 
-public class Car extends device implements Saleable {
+public abstract class Car extends device implements Saleable {
     public final Integer displacement;
     public final String engine;
 
@@ -12,6 +12,8 @@ public class Car extends device implements Saleable {
         this.displacement = displacement;
         this.engine = engine;
     }
+
+    public abstract void Refuel();
 
     public void TurnOn() {
         System.out.println("Samochód robi brum brum");
